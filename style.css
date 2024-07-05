@@ -1,0 +1,199 @@
+:root {
+    --main-color: hsl(33, 49%, 66%);
+    --black: #fff;
+    --bg: #f3f3fa;
+    --border: 1rem solid rgba(227, 197, 197, 0.516);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.5s linear;
+}
+
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+    color: white;
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    margin-right: 2rem;
+}
+
+.header .logo img {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a {
+    margin-right: 1rem;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    transition: 1s linear;
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons > div {
+    margin-left: 2rem;
+    color: #b53232;
+    font-size: 2rem;
+}
+
+.header .icons div:hover {
+    color: crimson;
+}
+
+.header .search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.header .search-form input {
+    background: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    width: 200px;
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.header .search-form .search-icon {
+    color: var(--black);
+    font-size: 1.6rem;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.image-gallery {
+    padding: 2rem 7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 180px; /* Adjust margin to avoid overlap with the header */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Add gap between images */
+    width: 100%;
+}
+
+.image-container a {
+    flex: 1 1 calc(33.333% - 1rem); /* Three images per row */
+    max-width: calc(33.333% - 1rem);
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid var(--main-color); /* Add border to images */
+    box-sizing: border-box; /* Include border in the element's total width and height */
+}
+
+/* Video Section */
+.video-section {
+    padding: 2rem 7%;
+    margin-top: 2rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer Section */
+.footer {
+    background: var(--black);
+    color: black;
+    padding: 4rem 7%; /* Increase padding for a larger footer */
+    text-align: center; /* Center the content */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+.footer p, .footer a {
+    color:rgb(175, 15, 167); /* Use main color for text and links */
+    font-size: 1.9rem;
+    margin: 0.5rem 0;
+}
+
+.footer a:hover {
+    color: rgb(190, 34, 34); /* Change link color on hover */
+}
